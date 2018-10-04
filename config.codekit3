@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "28901",
 "files": {
+	"/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/index.html",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -26,13 +33,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"/source/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/source/index.html",
-		"oF": 0
 		}
 	},
 "hooks": [
