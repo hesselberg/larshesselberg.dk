@@ -1,0 +1,171 @@
+/*
+ * Main stylesheet
+ *
+ * This is where we make sure all stylesheets are combined properly and imported
+ * Please refrain from writing any actual code in this file
+ */
+
+/*!
+
+PROJECT
+
+Proud authors:      larshesselberg.dk
+People behind:      Lars Hesselberg, @hesselberg
+
+!*/
+
+
+/**
+ * Class notation:  BEM - https://css-tricks.com/bem-101/
+ *
+ * Quick example of BEM class notation:
+ *
+ * BLOCK:           breadcrumb
+ * ELEMENT:         breadcrumb__link
+ * MODIFIER:        breadcrumb__link—-active
+ *
+ *
+ * So, for the markup it would look something like:
+ *
+ * <div class="breadcrumb">                                                      <---- BLOCK
+ *     <a class="breadcrumb__link" href="#">Home</a>                             <---- ELEMENT below the BLOCK
+ *     <span class="breadcrumb__link breadcrumb__link--active">Page</span>       <---- Also an ELEMENT, but to make it look active, we add the MODIFIER 'active'
+ * </div>
+ */
+
+/* Google Web Font
+********************/
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+
+/* Settings
+********************/
+@import "settings/settings.variables.less";
+
+
+/* Mixins
+********************/
+@import "mixins/mixin.vendor-prefixes.less";
+@import "mixins/mixin.grid.less";
+@import "mixins/mixin.grid-framework.less";
+@import "mixins/mixin.gradients.less";
+@import "mixins/mixin.clearfix.less";
+@import "mixins/mixin.buttons.less";
+
+
+/* Base
+********************/
+@import "base/base.less";
+@import "base/base.normalize.less";
+@import "base/base.browserfixes.less";
+@import "base/base.typography.less";
+@import "base/base.utilities.less";
+@import "base/base.grid.less";
+@import "base/base.buttons.less";
+@import "base/base.forms.less";
+@import "base/base.tables.less";
+
+
+/* Sections
+********************/
+@import "sections/section.case-preview.less";
+
+
+/* View
+********************/
+.site {
+    @media (min-width:@screen-md) {
+        max-width: 2560px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
+
+.info {
+    padding: 30px;
+
+    @media (min-width:@screen-md) {
+        padding: 0;
+        position: fixed;
+        height: 100%;
+        width: 40%;
+        max-width: 600px;
+    }
+}
+
+.about {
+    @media (min-width:@screen-md) {
+        position: absolute;
+        width: 65%;
+        left: 85px;
+        bottom: 15%;
+    }
+
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    &__underline {
+        font-weight: 300;
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
+    &__copy {
+        font-weight: 300;
+    }
+}
+
+.contact {
+    margin-bottom: 24px;
+    text-align: center;
+    
+    @media (min-width:@screen-md) {text-align: left;}
+
+    &__button {
+        .button();
+    }
+}
+
+.social-medias {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    @media (min-width:@screen-md) {text-align: left;}
+
+    &__media {
+        display: inline-block;
+        margin-right: 16px;
+    }
+
+    &__media-link {
+        display: block;
+    }
+
+    &__media-icon {
+        width: 24px;
+        height: 24px;
+        fill: #aaa;
+        transition: all .3s;
+
+        &--twitter:hover    {fill: #20A1EE;}
+        &--instagram:hover  {fill: #F98732;}
+        &--dribbble:hover   {fill: #E94E88;}
+        &--linkedin:hover   {fill: #0B7AB4;}
+        &--github:hover     {fill: #24292D;}
+    }
+}
+
+.right-side {
+    @media (min-width:@screen-md) {
+        margin-left: 40%;
+        width: 60%;
+        height: 100%;
+    }
+}
+

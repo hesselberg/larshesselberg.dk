@@ -1,0 +1,44 @@
+/**
+ * Base: Buttons
+ */
+
+/* #button
+********************/
+.button() {
+    background: none;
+    border: 2px solid @color-text;
+    color: @color-text;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    .transition(all .3s);
+
+    &:hover {
+        border-color: transparent;
+        background: @color-primary;
+        color: #fff;
+    }
+}
+
+.button-dark() {
+    border: 2px solid #fff;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    .transition(all .3s);
+
+    &:hover {
+        border-color: transparent;
+        background: @color-primary;
+        color: #fff;
+    }
+}

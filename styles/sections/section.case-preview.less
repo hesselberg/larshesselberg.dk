@@ -1,0 +1,176 @@
+/**
+ * Section: Case preview
+ */
+
+ .case-preview {
+    position: relative;
+    padding: 30px 0;
+
+    @media (min-width:@screen-sm) {
+        padding: 10vh 0 5vh;
+        height: 60vh;
+    }
+
+    @media (min-width:@screen-md) {height: 80vh;}
+
+    .valign {height: 100%;}
+
+    .when-where {
+        text-align: center;
+        margin-bottom: 20px;
+        
+        @media (min-width:@screen-sm) {
+            margin-bottom: 0;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+
+        .time {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: .33;
+        }
+
+        .when {
+            display: inline-block;
+            font-size: 14px;
+            opacity: .33;
+            font-weight: bold;
+
+            a {color: #fff;}
+
+            &:before {
+                content: "/";
+                font-weight: normal;
+                padding-left: 8px;
+                padding-right: 9px;
+            }
+        }
+    }
+
+    .media {
+        position: relative;
+        max-height: 300px;
+        overflow: hidden;
+        margin-bottom: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 230px;
+
+        @media (min-width:@screen-sm) {
+            position: absolute;
+            max-height: none;
+            overflow: visible;
+            margin-bottom: 0;
+            z-index: 1000;
+            top: 55%;
+            bottom: auto;
+            right: 0;
+            height: 90%;
+            width: 100%;
+            background-position: left center;
+            .translate(45%; -50%);
+        }
+    }
+
+    .inner {
+        position: relative;
+        margin:0 auto;
+        padding: 0 30px;
+        max-width: 1230px;
+        height: 100%;
+
+        @media (min-width:@screen-sm) {padding: 0 60px;}
+
+        .content {
+            text-align: center;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media (min-width:@screen-sm) {
+                text-align: left;
+                position: absolute;
+                max-width: none;
+                margin-left: 0;
+                margin-right: 0;
+                top: 50%;
+                width: 40%;
+                .translate(0; -50%);
+            }
+
+            h3 {
+                margin: 10px 0;
+                font-size: 18px;
+                font-weight: 800;
+                @media (min-width:@screen-sm) {font-size: 20px;}
+                @media (min-width:@screen-lg) {font-size: 30px;}
+            }
+
+            .teaser {font-size: 16px;}
+
+            .button {.button-dark();}
+
+            .next {
+                display: inline-block;
+                margin-top: 20px;
+                opacity:.75;
+                font-size: 13px;
+                color: #fff;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 1px;
+                    background: @color-primary;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    .transition(width .3s);
+                }
+
+                @media (min-width:@screen-sm) {
+                    margin-top: 0;
+                    margin-left: 20px;
+
+                    &:hover {
+                        opacity: 100;
+
+                        &:before {width: 100%;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+.case-preview.easir {
+    background-color: #00A76D;
+    color: #fff;
+
+    .media {background-image: url(/media/easir/tablet.png);}
+    .button:hover {color: #00A76D;}
+}
+
+.case-preview.power {
+    background-color: #232323;
+    color: #fff;
+
+    .media {background-image: url(/media/power/phone.png);}
+    span.power-color {color: #f06000;}
+    .button:hover {color: #f06000;}
+}
+
+.case-preview.jysk {
+    background-color: #0252ad;
+    color: #fff;
+
+    .media {
+        background-image: url(/media/jysk/browser.png);
+    }
+    .button:hover {color: #0252ad;}
+}
